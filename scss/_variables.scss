@@ -1,4 +1,5 @@
 $primary_color: #274f75;
+$span_color: #c80808;
 $nav_bg: #84bf0e;
 
 %container {
@@ -8,4 +9,18 @@ $nav_bg: #84bf0e;
 
 %clearFloat {
     overflow: hidden;
+}
+
+%span_last {
+    color: $span_color;
+    font-weight: 700;
+}
+
+%text {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #3d3d3d;
+    line-height: 24px;
+    text-align: justify;
+    word-spacing: 1px;
 }

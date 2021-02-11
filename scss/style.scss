@@ -122,22 +122,25 @@
         max-width: 630px;
         padding-top: 40px;
         padding-left: 20px;
+        display: inline-block;
 
         div {
+            @extend %clearFloat;
             h1 {
                 font-size: 28px;
                 font-family: Arial, sans-serif;
-    
-                span.last {
-                    font-weight: 700;
-                    color: #c80808;
+                color: $primary_color;
+
+                span {
+                    @extend %span_last;
                 }
             }
-    
+
             a {
                 display: block;
                 float: left;
                 border: 1px solid #c31048;
+                margin-top: 30px;
 
                 img {
                     width: 160px;
@@ -145,7 +148,59 @@
                 }
             }
 
+            div {
+                max-width: 400px;
+                display: inline-block;
+                margin-left: 20px;
+                margin-top: 30px;
+                p {
+                    @extend %text;
+
+                    &:first-child {
+                        margin-bottom: 15px;
+                    }
+
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
 
+        ul {
+            padding-top: 40px;
+            @extend %clearFloat;
+
+            li {
+                float: left;
+                max-width: 280px;
+
+                &:first-child {
+                    margin-right: 20px;
+                }
+
+                h2 {
+                    margin-bottom: 20px;
+
+                    a {
+                        font-family: Arial, sans-serif;
+                        font-size: 20px;
+                        color: $primary_color;
+                        text-decoration: none;
+
+                        span {
+                            @extend %span_last;
+                        }
+                    }
+                }
+                p {
+                    @extend %text;
+
+                    &:first-child {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
     }
 }

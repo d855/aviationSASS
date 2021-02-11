@@ -50,8 +50,22 @@ input {
   margin: 0 auto;
 }
 
-#header #section {
+#home #aside ul, #home #aside div, #header #section {
   overflow: hidden;
+}
+
+#home #aside ul li h2 a span, #home #aside div h1 span {
+  color: #c80808;
+  font-weight: 700;
+}
+
+#home #aside ul li p, #home #aside div div p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #3d3d3d;
+  line-height: 24px;
+  text-align: justify;
+  word-spacing: 1px;
 }
 
 #header {
@@ -149,23 +163,56 @@ input {
   max-width: 630px;
   padding-top: 40px;
   padding-left: 20px;
+  display: inline-block;
 }
 #home #aside div h1 {
   font-size: 28px;
   font-family: Arial, sans-serif;
-}
-#home #aside div h1 span.last {
-  font-weight: 700;
-  color: #c80808;
+  color: #274f75;
 }
 #home #aside div a {
   display: block;
   float: left;
   border: 1px solid #c31048;
+  margin-top: 30px;
 }
 #home #aside div a img {
   width: 160px;
   padding: 10px;
+}
+#home #aside div div {
+  max-width: 400px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+#home #aside div div p:first-child {
+  margin-bottom: 15px;
+}
+#home #aside div div p span {
+  text-decoration: underline;
+}
+#home #aside ul {
+  padding-top: 40px;
+}
+#home #aside ul li {
+  float: left;
+  max-width: 280px;
+}
+#home #aside ul li:first-child {
+  margin-right: 20px;
+}
+#home #aside ul li h2 {
+  margin-bottom: 20px;
+}
+#home #aside ul li h2 a {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: #274f75;
+  text-decoration: none;
+}
+#home #aside ul li p:first-child {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
