@@ -84,8 +84,7 @@
 
     #tagline {
         background: url("../images/background.jpg");
-        //    background-repeat: no-repeat;
-        //    background-size: cover;
+        box-shadow: 0 5px 5px -5px #333;
 
         div {
             min-height: 450px;
@@ -116,7 +115,7 @@
 
 #home {
     @extend %container;
-    box-shadow: 0 0 5px #333;
+    margin-bottom: 100px;
 
     #aside {
         max-width: 630px;
@@ -195,10 +194,142 @@
                 }
                 p {
                     @extend %text;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    #calendar {
+        max-width: 300px;
+        float: right;
+        padding-top: 40px;
+
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            color: #c31048;
+            font-size: 28px;
+        }
+
+        ul {
+            li {
+                margin-top: 30px;
+                div {
+                    @extend %clearFloat;
+                    span {
+                        width: 38px;
+                        height: 38px;
+                        display: block;
+                        background-color: $primary_color;
+                        font-family: Arial, sans-serif;
+                        font-size: 18px;
+                        color: white;
+                        text-align: right;
+                        padding: 5px;
+                        box-sizing: border-box;
+                        line-height: 86%;
+                        float: left;
+                        margin-right: 10px;
+                    }
+                    h2 {
+                        display: inline-block;
+                        // padding-bottom: 25px;
+                        a {
+                            color: $primary_color;
+                            font-size: 18px;
+                            text-decoration: none;
+                            font-family: Arial, sans-serif;
+                        }
+                    }
+                }
+
+                p {
+                    padding-top: 20px;
+                    // position: relative;
+                    @extend %text;
+                    // &::after {
+                    //     content: "";
+                    //     position: absolute;
+                    //     width: 100%;
+                    //     height: 1px; // suit your need
+                    //     background: #c6c6c6; // suit your need
+                    //     top: 115%;
+                    //     left: 0;
+                    // }
+                }
+
+                hr {
+                    background-color: #c6c6c6;
+                    border: none;
+                    height: 1px;
+                }
+            }
+        }
+    }
+}
+#footer {
+    background: $primary_color;
+    border-top: 1px solid #c80808;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 1);
+    text-align: right;
+
+    div{
+        @extend %container;
+        @extend %clearFloat;
+
+        #connect {
+            float: left;
+            display: block;
+            margin-top: 36px;
+
+            a {
+                margin-right: 15px;
+            }
+        }
+
+        .section {
+            margin: 0;
+            
+            ul {
+                @extend %clearFloat;
+                display: inline-block;
+                list-style-type: none;
+                margin-right:  0;
+                margin-left: 0;
+                padding: 0;
+                margin-top: 35px;
+                text-align: right;
+                
+                li {
+                    float: left;
+                    padding: 0 5px;
+                    border-left:  1px solid #6a86a0;
+                    line-height: 90%;
 
                     &:first-child {
-                        margin-bottom: 20px;
+                        border-left: none;
                     }
+
+                    a{
+                        text-decoration: none;
+                        color: #6a86a0;
+                        font-family: Arial, sans-serif;
+                    }
+                }
+            }
+
+            p{
+                color: #6a86a0;
+                font-family: Arial, sans-serif;
+                margin-top: 15px;
+                margin-bottom: 40px;
+
+                a{
+                    text-decoration: none;
+                    color: inherit;
+                    font-family: inherit;
+
                 }
             }
         }
